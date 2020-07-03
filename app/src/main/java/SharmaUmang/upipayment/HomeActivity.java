@@ -1,5 +1,6 @@
 package SharmaUmang.upipayment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -7,6 +8,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -36,12 +38,26 @@ public class HomeActivity extends AppCompatActivity {
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                //Getting the values from the EditTexts
 
-                   payUsingUpi(name.getText().toString(), upivirtualid.getText().toString(),
+                public void onClick(View view) {
+                //Getting the values from the EditTexts
+                if (TextUtils.isEmpty(name.getText().toString().trim())) {
+                    Toast.makeText(HomeActivity.this, " Name is invalid", Toast.LENGTH_SHORT).show();
+
+                } else if (TextUtils.isEmpty(upivirtualid.getText().toString().trim())) {
+                    Toast.makeText(HomeActivity.this, " UPI ID is invalid", Toast.LENGTH_SHORT).show();
+
+                } else if (TextUtils.isEmpty(note.getText().toString().trim())) {
+                    Toast.makeText(HomeActivity.this, " Note is invalid", Toast.LENGTH_SHORT).show();
+
+                } else if (TextUtils.isEmpty(amount.getText().toString().trim())) {
+                    Toast.makeText(HomeActivity.this, " Amount is invalid", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    payUsingUpi(name.getText().toString(), upivirtualid.getText().toString(),
                             note.getText().toString(), amount.getText().toString());
 
+                }
             }
         });
     }
