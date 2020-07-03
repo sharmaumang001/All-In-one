@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/upi_logo"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please Enter Receiver's Name"
+        android:background="@drawable/textview_bg"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/upi_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please Enter Receivers UPI ID"
+        android:background="@drawable/textview_bg"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/amount_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please Enter Amount"
+        android:background="@drawable/textview_bg"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add the Transaction Note"
+        android:background="@drawable/textview_bg"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:text="Pay Now"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+
+
+
+</LinearLayout>
